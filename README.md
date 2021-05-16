@@ -49,11 +49,12 @@ module.exports = {
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
+        title: site.shortDescription,
         titleTemplate: `%s – ${site.title}`,
         meta: [
           { name: 'description', content: site.description },
           { name: 'author', content: site.author },
-          { name: 'image', content: `${site.origin}/site.jpg` },
+          { name: 'og:image', content: `${site.origin}/site.jpg` },
           { property: 'og:type', content: 'website' },
         ],
       },
@@ -61,3 +62,5 @@ module.exports = {
   ],
 };
 ```
+
+Options behave as fallbacks that can be overridden by redefining their values in a component.
