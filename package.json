@@ -1,6 +1,6 @@
 {
   "name": "@bitpas/gatsby-plugin-seo",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -27,7 +27,8 @@
   "scripts": {
     "build": "npm run clean && npm run build:ts",
     "build:ts": "tsc",
-    "clean": "rm -rf lib/"
+    "clean": "rm -rf lib/",
+    "watch": "tsc --watch"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.1",
