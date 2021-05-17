@@ -1,5 +1,7 @@
 # @bitpas/gatsby-plugin-seo
 
+**Unstable until v1. Updates may include breaking changes. Use at your own risk.**
+
 Provides drop-in support for [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) with global configuration via `gatsby-config.js`.
 
 ## Installation
@@ -49,14 +51,16 @@ module.exports = {
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
-        title: site.shortDescription,
-        titleTemplate: `%s – ${site.title}`,
-        meta: [
-          { name: 'description', content: site.description },
-          { name: 'author', content: site.author },
-          { name: 'og:image', content: `${site.origin}/site.jpg` },
-          { property: 'og:type', content: 'website' },
-        ],
+        helmet: {
+          title: site.shortDescription,
+          titleTemplate: `%s – ${site.title}`,
+          meta: [
+            { name: 'description', content: site.description },
+            { name: 'author', content: site.author },
+            { name: 'og:image', content: `${site.origin}/site.jpg` },
+            { property: 'og:type', content: 'website' },
+          ],
+        },
       },
     },
   ],
