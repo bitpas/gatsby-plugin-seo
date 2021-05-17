@@ -1,13 +1,14 @@
 import React from 'react';
-import { Helmet, HelmetProvider, HelmetProps } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { WrapPageElementBrowserArgs, WrapRootElementBrowserArgs } from 'gatsby';
+import { OptionsProps } from './types';
 
 export const wrapPageElement = (
   { element }: WrapPageElementBrowserArgs,
-  options: HelmetProps
+  { helmet }: OptionsProps
 ): JSX.Element => (
   <>
-    <Helmet {...options} />
+    <Helmet {...helmet} />
     {element}
   </>
 );
