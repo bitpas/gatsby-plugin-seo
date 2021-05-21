@@ -1,7 +1,7 @@
 {
   "name": "@bitpas/gatsby-plugin-seo",
   "description": "Gatsby plugin providing drop-in support for react-helmet-async with global configuration via gatsby-config.js",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -32,14 +32,15 @@
     "watch": "tsc --watch"
   },
   "devDependencies": {
-    "@types/react-helmet": "^6.1.1",
     "gatsby": "^3.3.1",
     "react": "^17.0.2",
-    "react-helmet-async": "^1.0.9",
-    "typescript": "^4.2.4"
+    "react-dom": "^17.0.2",
+    "react-helmet-async": "^1.0.9"
   },
   "peerDependencies": {
     "gatsby": "^3",
+    "react": "^17",
+    "react-dom": "^17",
     "react-helmet-async": "^1"
   }
 }
