@@ -2,12 +2,24 @@
 
 **Unstable until v1. Updates may include breaking changes. Use at your own risk.**
 
-Provides drop-in support for [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) with global configuration via `gatsby-config.js`.
+Provides drop-in support for [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) with server-side rendering and global configuration via `gatsby-config.js`.
 
 ## Installation
 
+1. Install plugin
+
 ```sh
-npm install @bitpas/gatsby-plugin-seo react-helmet-async
+npm install @bitpas/gatsby-plugin-seo
+```
+
+Manual [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) installation may be required depending on your npm version.
+
+> npm versions 1, 2, and 7 will automatically install peerDependencies if they are not explicitly depended upon higher in the dependency tree. For npm versions 3 through 6, you will receive a warning that the peerDependency is not installed instead.
+
+2. Install peer dependencies
+
+```sh
+npm install react-helmet-async
 ```
 
 ## Usage
@@ -40,7 +52,7 @@ export default HomePage;
 
 ## Options
 
-`@bitpas/gatsby-gatsby-plugin-seo` exposes the [react-helmet props api](https://github.com/nfl/react-helmet#features) for use as global defaults. Types definitions are available at [@types/react-helmet](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/db7577cf9190a6a615c2d00c0c5fcadb4f88b2e2/types/react-helmet/index.d.ts#L37).
+`@bitpas/gatsby-gatsby-plugin-seo` exposes the [react-helmet props api](https://github.com/nfl/react-helmet#features) in `gatsby-config.js` to set global defaults.
 
 ```js:title=gatsby-config.js
 // in gatsby-config.js
@@ -67,4 +79,27 @@ module.exports = {
 };
 ```
 
-Options behave as fallbacks that can be overridden by redefining their values in a component.
+Options behave as fallbacks that can be overridden by redeclaring their values in a component.
+
+**Title override example:**
+
+```js:title=gatsby-config.js
+// in gatsby-config.js
+...
+options: {
+  helmet: {
+    title: 'Global Title',
+    titleTemplate: '%s – SEO',
+  },
+},
+...
+```
+
+```js:title=FooPage.jsx
+// in FooPage.jsx
+...
+<Helmet title="Foo Title" titleTemplate="SEO - %s" />
+...
+```
+
+Renders the `SEO - Foo Title` for `FooPage` and `Global Title - SEO` for all other pages.

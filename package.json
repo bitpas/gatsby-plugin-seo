@@ -1,7 +1,7 @@
 {
   "name": "@bitpas/gatsby-plugin-seo",
-  "description": "Gatsby plugin providing drop-in support for react-helmet-async with global configuration via gatsby-config.js",
-  "version": "0.3.3",
+  "description": "Gatsby plugin providing drop-in support for react-helmet-async with SSR and global configuration via gatsby-config.js",
+  "version": "0.4.0",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
@@ -13,6 +13,7 @@
   "main": "lib/index.js",
   "files": [
     "gatsby-browser.js",
+    "gatsby-ssr.js",
     "lib",
     "src"
   ],
