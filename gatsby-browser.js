@@ -1,1 +1,1 @@
-module.exports = require('./lib/gatsby-browser');
+export { wrapPageElement, wrapRootElement } from './lib/gatsby-browser';
