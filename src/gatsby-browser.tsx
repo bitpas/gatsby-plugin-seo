@@ -1,20 +1,22 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { WrapPageElementBrowserArgs, WrapRootElementBrowserArgs } from 'gatsby';
-import { OptionsProps } from './types';
+import {
+  GatsbyBrowser,
+  WrapPageElementBrowserArgs,
+  WrapRootElementBrowserArgs,
+} from 'gatsby';
+import { SeoPluginOptions } from './types';
 
-export const wrapPageElement = (
+export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = (
   { element }: WrapPageElementBrowserArgs,
-  { helmet }: OptionsProps
-): JSX.Element => (
+  { helmet }: SeoPluginOptions
+) => (
   <>
     <Helmet {...helmet} />
     {element}
   </>
 );
 
-export const wrapRootElement = ({
+export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({
   element,
-}: WrapRootElementBrowserArgs): JSX.Element => (
-  <HelmetProvider>{element}</HelmetProvider>
-);
+}: WrapRootElementBrowserArgs) => <HelmetProvider>{element}</HelmetProvider>;
