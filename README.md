@@ -6,20 +6,8 @@ Provides drop-in support for [react-helmet-async](https://www.npmjs.com/package/
 
 ## Installation
 
-1. Install plugin
-
 ```sh
-npm install @bitpas/gatsby-plugin-seo
-```
-
-Manual [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) installation may be required depending on your npm version.
-
-> npm versions 1, 2, and 7 will automatically install peerDependencies if they are not explicitly depended upon higher in the dependency tree. For npm versions 3 through 6, you will receive a warning that the peerDependency is not installed instead.
-
-2. Install peer dependencies
-
-```sh
-npm install react-helmet-async
+npm install @bitpas/gatsby-plugin-seo react-helmet-async
 ```
 
 ## Usage
@@ -102,4 +90,4 @@ options: {
 ...
 ```
 
-Renders the `SEO - Foo Title` for `FooPage` and `Global Title - SEO` for all other pages.
+Renders `SEO - Foo Title` for `FooPage` and `Global Title - SEO` for all other pages.
