@@ -29,10 +29,19 @@
     "build": "npm run clean && npm run build:ts",
     "build:ts": "tsc",
     "clean": "rm -rf lib/",
+    "format": "npm run format:code && npm run format:other",
+    "format:code": "npm run lint:code -- --fix",
+    "format:other": "npm run prettier -- --write",
+    "lint": "npm run lint:code && npm run lint:other",
+    "lint:code": "eslint --ext .js,.ts,.tsx .",
+    "lint:other": "npm run prettier -- --check",
+    "prettier": "prettier \"**/*.md\"",
     "watch": "tsc --watch"
   },
   "devDependencies": {
+    "@bitpas/eslint-config": "^0.6.1",
     "gatsby": "^3.3.1",
+    "prettier": "^2.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.0.9"
