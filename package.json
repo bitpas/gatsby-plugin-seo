@@ -8,8 +8,6 @@
     "react-helmet",
     "seo"
   ],
-  "author": "Ryan Todd Garza <ryantoddgarza@gmail.com>",
-  "license": "MIT",
   "main": "lib/index.js",
   "files": [
     "gatsby-browser.js",
@@ -17,15 +15,16 @@
     "lib",
     "src"
   ],
-  "homepage": "https://github.com/bitpas/bitpas/tree/main/packages/gatsby-plugin-seo#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpas/bitpas.git",
-    "directory": "packages/gatsby-plugin-seo"
+    "url": "git+https://github.com/bitpas/gatsby-plugin-seo.git"
   },
+  "author": "Ryan Todd Garza <ryantoddgarza@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitpas/bitpas/issues"
+    "url": "https://github.com/bitpas/gatsby-plugin-seo/issues"
   },
+  "homepage": "https://github.com/bitpas/gatsby-plugin-seo",
   "scripts": {
     "build": "npm run clean && npm run build:ts",
     "build:ts": "tsc",
