@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import {
+import type {
   GatsbyBrowser,
   WrapPageElementBrowserArgs,
   WrapRootElementBrowserArgs,
 } from 'gatsby';
-import { SeoPluginOptions } from './types';
+import type { SeoPluginOptions } from './types';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = (
   { element }: WrapPageElementBrowserArgs,

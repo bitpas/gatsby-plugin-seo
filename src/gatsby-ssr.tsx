@@ -1,7 +1,11 @@
-import { GatsbySSR, RenderBodyArgs, WrapRootElementNodeArgs } from 'gatsby';
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { Context } from './types';
+import type {
+  GatsbySSR,
+  RenderBodyArgs,
+  WrapRootElementNodeArgs,
+} from 'gatsby';
+import type { Context } from './types';
 
 const context: Context = {};
 

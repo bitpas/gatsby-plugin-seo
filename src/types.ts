@@ -1,5 +1,5 @@
-import { HelmetServerState, HelmetProps } from 'react-helmet-async';
-import { PluginOptions } from 'gatsby';
+import type { HelmetServerState, HelmetProps } from 'react-helmet-async';
+import type { PluginOptions } from 'gatsby';
 
 export interface SeoPluginOptions extends PluginOptions {
   helmet?: HelmetProps;
