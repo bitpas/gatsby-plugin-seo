@@ -1,6 +1,6 @@
 {
   "name": "@bitpas/gatsby-plugin-seo",
-  "description": "Gatsby plugin providing drop-in support for react-helmet-async with SSR and global configuration via gatsby-config.js",
+  "description": "Gatsby plugin providing drop-in support for react-helmet-async with SSR and global configuration via gatsby-config",
   "version": "0.4.1",
   "keywords": [
     "gatsby",
@@ -39,7 +39,7 @@
     "react-helmet-async": "^1.0.9"
   },
   "peerDependencies": {
-    "gatsby": "^3",
+    "gatsby": "^4 || ^3",
     "react": "^17",
     "react-dom": "^17",
     "react-helmet-async": "^1"
