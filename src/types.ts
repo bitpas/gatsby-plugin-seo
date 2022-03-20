@@ -1,4 +1,4 @@
-import { HelmetData, HelmetProps } from 'react-helmet-async';
+import { HelmetServerState, HelmetProps } from 'react-helmet-async';
 import { PluginOptions } from 'gatsby';
 
 export interface SeoPluginOptions extends PluginOptions {
@@ -6,5 +6,5 @@ export interface SeoPluginOptions extends PluginOptions {
 }
 
 export interface Context {
-  helmet?: HelmetData;
+  helmet?: HelmetServerState;
 }
